@@ -1,0 +1,16 @@
+.body-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0 0 0 / 0.7);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.body-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}

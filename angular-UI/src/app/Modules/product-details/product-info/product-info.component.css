@@ -1,0 +1,21 @@
+.title {
+  color: #070707;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.product-price {
+  color: var(--text-color-in-light);
+  margin: 20px 0 25px;
+}
+
+.product-price > span {
+  color: var(--main-color);
+  font-size: 25px;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="register-form mycontainer">
+  <form (ngSubmit)="onSubmit(registerForm.value)" [formGroup]="registerForm">
+    <h2>Register</h2>
+    <mat-form-field>
+      <mat-label>Full Name</mat-label>
+      <input formControlName="name" matInput type="text">
+      <mat-error *ngIf="name.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="pat@example.com" type="email">
+      <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="email.hasError('email')">Email is not valid</mat-error>
+      <mat-error *ngIf="email.hasError('emailExist')">Email has already been taken</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="0">Male</mat-option>
+        <mat-option value="1">Female</mat-option>
+      </mat-select>
+      <mat-error *ngIf="gender.hasError('required')">Gender is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Birth Date</mat-label>
+      <input formControlName="birthdate" matInput [min]="minDate" (focus)="picker.open()" [max]="maxDate" placeholder="MM/DD/YYYY" [matDatepicker]="picker">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker startView="multi-year" [startAt]="startDate"></mat-datepicker>
+      <mat-error *ngIf="birthdate.hasError('required')">Birth Date is required</mat-error>
+    </mat-form-field>
+
+    <ng-container formGroupName="passwords">
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" required>
+        <mat-error *ngIf="password!.hasError('required')">Password is required</mat-error>
+        <mat-error *ngIf="password!.hasError('minLength')">Must be more than 8 characters</mat-error>
+        <mat-error *ngIf="password!.hasError('uppercase')">Must contain at least 1 uppercase character</mat-error>
+        <mat-error *ngIf="password!.hasError('lowercase')">Must contain at least 1 lowercase character</mat-error>
+        <mat-error *ngIf="password!.hasError('numeric')">Must contain at least 1 number</mat-error>
+        <mat-error *ngIf="password!.hasError('special')">Must contain at least 1 special character</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input formControlName="confirm_password" matInput type="password" required>
+        <mat-error *ngIf="confirmPassword!.hasError('required')">Confirm password is required</mat-error>
+        <mat-error *ngIf="confirmPassword!.hasError('mismatch')">Confirm password not match password</mat-error>
+      </mat-form-field>
+    </ng-container>
+    <button type="submit" mat-flat-button color="primary" [disabled]="registerForm.invalid">SIGN UP</button>
+  </form>
+
+  <p class="text-center pt-3">Already have Account?
+    <a routerLink="/user/login">Sign In</a>
+  </p>
+</div>

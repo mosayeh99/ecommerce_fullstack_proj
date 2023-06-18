@@ -1,0 +1,4 @@
+<a routerLink="{{contentLink}}" class="content-link">
+  <img class="content-img" [src]="imgSrc" [alt]="imgAlt">
+  <h6 class="content-text" *ngIf="imgText">{{imgText | titlecase}}</h6>
+</a>

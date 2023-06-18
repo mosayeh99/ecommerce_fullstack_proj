@@ -1,0 +1,183 @@
+/* -------Navbar------- */
+header .topbar {
+  background-color: var(--background-color);
+  padding: 5px 0;
+}
+
+header .topbar .shopy-topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+header .topbar .shopy-topbar-content .links {
+  display: flex;
+  gap: 30px;
+}
+
+header .topbar .shopy-topbar-content .links a {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+header .topbar .shopy-topbar-content .links a:hover {
+  color: var(--link-hover-color);
+}
+
+header .topbar .shopy-topbar-content .offer p {
+  font-size: 16px;
+}
+
+header .topbar .shopy-topbar-content .location a {
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+header .topbar .shopy-topbar-content .location a:hover {
+  color: var(--link-hover-color);
+}
+
+header .head-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header .head-bar .toggle-menu {
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+header .head-bar .toggle-menu span {
+  width: 30px;
+  height: 2px;
+  background-color: var(--main-color);
+}
+
+header .head-bar .toggle-menu span:nth-child(2) {
+  width: 20px;
+}
+
+header .head-bar .logo {
+  width: 200px;
+}
+
+header .head-bar .head-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--main-color);
+}
+
+header .head-bar .head-icons .user-icon {
+  cursor: pointer;
+}
+
+header .head-bar .head-icons .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header .head-bar .head-icons .search input {
+  width: 300px;
+  border: 1px solid #777;
+  outline: 0;
+  padding: 6px 20px;
+  caret-color: var(--caret-color);
+  font-size: 14px;
+  border-radius: 25px;
+  transition: var(--main-transition);
+}
+
+header .head-bar .head-icons .search a {
+  position: absolute;
+  right: 12px;
+  top: 4px;
+  transition: var(--main-transition);
+}
+
+header .head-bar .head-icons .search a:hover {
+  color: var(--link-hover-color);
+}
+
+header .head-bar .head-icons a svg {
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+header .head-bar .head-icons a svg:hover {
+  color: var(--link-hover-color);
+}
+
+header .head-bar .head-icons .heart-icon,
+header .head-bar .head-icons .cart-icon {
+  position: relative;
+}
+
+header .head-bar .head-icons .heart-icon span,
+header .head-bar .head-icons .cart-icon span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -4px;
+  right: -8px;
+  line-height: 2;
+  box-shadow: 0px 1px 5px rgba(0 0 0 / 0.2);
+  cursor: pointer;
+}
+
+header nav {
+  background-color: var(--background-color);
+  padding: 5px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+header nav ul li a {
+  transition: var(--main-transition);
+  color: var(--main-color);
+}
+
+header nav ul li:hover a {
+  color: var(--link-hover-color);
+}
+
+@media (max-width: 767px) {
+  header .topbar .shopy-topbar-content {
+    justify-content: center;
+  }
+  header .topbar .shopy-topbar-content .links,
+  header .topbar .shopy-topbar-content .location,
+  header .head-bar .head-icons .search,
+  header .head-bar .head-icons .heart-icon,
+  header .head-bar .head-icons .user-icon,
+  header nav {
+    display: none !important;
+  }
+  header .head-bar {
+    box-shadow: 0 4px 6px -4px rgb(0 0 0 / 20%);
+  }
+  header .head-bar .toggle-menu {
+    display: flex !important;
+  }
+}

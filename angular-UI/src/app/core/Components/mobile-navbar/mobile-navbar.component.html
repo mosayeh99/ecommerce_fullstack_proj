@@ -1,0 +1,75 @@
+<div class="navbar-mobile">
+  <div class="navbar-menu navbar-item">
+    <div (click)="toggleMenuDrawer()">
+      <span class="navbar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24"
+             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </span>
+      <span class="navbar-label">Menu</span>
+    </div>
+  </div>
+  <div class="navbar-search navbar-item">
+    <div (click)="toggleSearchDrawer()">
+      <span class="navbar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </span>
+      <span class="navbar-label">Search</span>
+    </div>
+  </div>
+  <div class="navbar-account navbar-item">
+    <a routerLink="/user/login">
+      <span class="navbar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24"
+             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+        </svg>
+      </span>
+      <span class="navbar-label">Account</span>
+    </a>
+  </div>
+  <div class="navbar-wishlist navbar-item">
+    <a routerLink="/wishlist">
+      <span class="navbar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24"
+             height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572">
+          </path>
+        </svg>
+        <span class="shopy-wishlist-count">0</span>
+      </span>
+      <span class="navbar-label">Wishlist</span>
+    </a>
+  </div>
+  <div class="navbar-cart navbar-item">
+    <a routerLink="/cart">
+      <span class="navbar-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+             width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"
+             fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <circle cx="6" cy="19" r="2"></circle>
+          <circle cx="17" cy="19" r="2"></circle>
+          <path d="M17 17h-11v-14h-2"></path>
+          <path d="M6 5l14 1l-1 7h-13"></path>
+        </svg>
+        <span class="shopy-cart-count">0</span>
+      </span>
+      <span class="navbar-label">Cart</span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,103 @@
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: calc(100vw - 100px);
+  height: 100vh;
+  transition: var(--main-transition);
+  left: calc(-100vw - 100px);
+  visibility: hidden;
+  z-index: 99;
+}
+
+.menu-drawer.active {
+  left: 0;
+  visibility: visible;
+}
+
+.drawer-close-btn {
+  position: absolute;
+  right: -56px;
+  color: white;
+  padding: 12px;
+  background-color: #777;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+.drawer-header .mb-tap-title {
+  flex: 1;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color-in-dark);
+  cursor: pointer;
+  position: relative;
+}
+
+.drawer-header .mb-tap-title::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.drawer-header .mb-tap-title.active {
+  background-color: #ccc;
+}
+
+.drawer-header .mb-tap-title.active::after{
+  width: 100%;
+}
+
+.drawer-header .mb-tap-title span {
+  pointer-events: none;
+}
+
+.menu-mb-item {
+  display: none;
+}
+
+.menu-mb-item.active {
+  display: block;
+}
+
+.menu-mb-item ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-mb-item ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 50px;
+  padding: 5px 20px;
+  color: var(--text-color-in-light);
+  border-bottom: 1px solid #ccc;
+  transition: var(--main-transition);
+}
+
+.menu-mb-item ul li a:hover {
+  background-color: var(--background-color);
+}
+
+@media (min-width: 500px) {
+  .menu-drawer {
+    width: 340px;
+    left: -396px;
+  }
+}

@@ -1,0 +1,80 @@
+.product {
+  display: flex;
+  margin: 50px 0;
+  gap: 85px;
+}
+
+.product .images {
+  flex: 3;
+}
+
+.product .details {
+  flex: 2;
+}
+
+.product-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.add-to-cart-btn {
+  background: var(--secondary-color);
+  color: #fff;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  height: 35px;
+  padding: 0 15px;
+}
+
+.add-to-wishlist-btn {
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.product-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+  gap: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.product-features .feature .feature-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+}
+
+.product-features .feature .feature-img img {
+  width: 100%;
+}
+
+.product-features .feature p {
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 991px) {
+  .product {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .images {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+#shopy-mission-section {
+  background-color: #ebebeb;
+  padding: 50px 0;
+}
+
+#shopy-mission-section #mission-sec-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#shopy-mission-section #mission-sec-text {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#shopy-mission-section #mission-sec-text p:first-child {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+#shopy-mission-section #mission-sec-text p:nth-child(2) {
+  margin: 50px 0 30px;
+  font-size: 50px;
+}
+
+#shopy-mission-section #mission-sec-text p:last-child {
+  font-size: 14px;
+}
+
+#shopy-mission-section #mission-sec-img {
+  max-width: 500px;
+  display: flex;
+}
+
+#shopy-mission-section #mission-sec-img img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  #shopy-mission-section #mission-sec-text p:first-child {
+    font-size: 20px;
+  }
+  #shopy-mission-section #mission-sec-text p:nth-child(2) {
+    margin: 50px 0 30px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  #shopy-mission-section #mission-sec-img {
+    justify-content: center;
+  }
+  #shopy-mission-section #mission-sec-img img {
+    width: 80%;
+  }
+  #shopy-mission-section #mission-sec-row {
+    flex-direction: column-reverse;
+  }
+  #shopy-mission-section #mission-sec-text p:nth-child(2) {
+    margin: 20px 0;
+  }
+}

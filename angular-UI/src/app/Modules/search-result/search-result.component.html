@@ -1,0 +1,73 @@
+<app-page-head-banner [headText]="searchValue"></app-page-head-banner>
+
+<div class="product-filter-bar mycontainer">
+  <div class="product-filter-btn" (click)="toggleFilterDrawer()">
+    <span class="pe-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24"
+           height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
+      </svg>
+    </span>
+    <span class="pe-none">Filter</span>
+  </div>
+  <div class="display-products-shape">
+    <div class="large-screen-display d-none d-md-flex gap-3">
+      <span #largeGridLayoutBtn (click)="changeProductsLargeGrid('grid-2-applied', $event)">
+        <svg fill="curentColor" height="18" viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1H7V7H1V1Z"/>
+          <path d="M9 1H15V7H9V1Z"/>
+          <path d="M1 9H7V15H1V9Z"/>
+          <path d="M9 9H15V15H9V9Z"/>
+        </svg>
+      </span>
+      <span class="active" #largeGridLayoutBtn (click)="changeProductsLargeGrid('grid-4-applied', $event)">
+        <svg height="16px" version="1.1" viewBox="0 0 16 16" width="16px" xmlns="http://www.w3.org/2000/svg"><g fill="curentColor" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="curentColor" id="Core" transform="translate(-340.000000, -4.000000)"><g id="apps" transform="translate(340.000000, 4.000000)"><path d="M0,4 L4,4 L4,0 L0,0 L0,4 L0,4 Z M6,16 L10,16 L10,12 L6,12 L6,16 L6,16 Z M0,16 L4,16 L4,12 L0,12 L0,16 L0,16 Z M0,10 L4,10 L4,6 L0,6 L0,10 L0,10 Z M6,10 L10,10 L10,6 L6,6 L6,10 L6,10 Z M12,0 L12,4 L16,4 L16,0 L12,0 L12,0 Z M6,4 L10,4 L10,0 L6,0 L6,4 L6,4 Z M12,10 L16,10 L16,6 L12,6 L12,10 L12,10 Z M12,16 L16,16 L16,12 L12,12 L12,16 L12,16 Z" id="Shape"/></g></g></g></svg>
+      </span>
+    </div>
+    <div class="mobile-display d-flex d-md-none gap-3">
+      <span #mbGridLayoutBtn class="mb-grid-layout-icon" (click)="changeProductsMbGrid('grid-1-applied', $event)">
+        <svg height="16" viewBox="0 0 512 512" width="16" xmlns="http://www.w3.org/2000/svg">
+          <rect height="100%" width="100%" x="0" y="0"></rect>
+        </svg>
+      </span>
+      <span class="active" #mbGridLayoutBtn (click)="changeProductsMbGrid('grid-2-applied', $event)">
+        <svg fill="curentColor" height="18" viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1H7V7H1V1Z"/>
+          <path d="M9 1H15V7H9V1Z"/>
+          <path d="M1 9H7V15H1V9Z"/>
+          <path d="M9 9H15V15H9V9Z"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="shopy-section-product-list">
+  <div class="mycontainer">
+    <div id="product-list" #productList>
+      <app-product></app-product>
+      <app-product></app-product>
+      <app-product></app-product>
+      <app-product></app-product>
+    </div>
+  </div>
+</div>
+
+<!--<div class="result-not-found mycontainer">-->
+<!--  <span>-->
+<!--    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-exclamation"-->
+<!--         width="128" height="128" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"-->
+<!--         stroke-linecap="round" stroke-linejoin="round">-->
+<!--      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
+<!--      <circle cx="10" cy="10" r="7"></circle>-->
+<!--      <path d="M21 21l-6 -6"></path>-->
+<!--      <path d="M10 13v.01"></path>-->
+<!--      <path d="M10 7v3"></path>-->
+<!--    </svg>-->
+<!--  </span>-->
+<!--  <div class="not-found-text">-->
+<!--    <span>No results founded for your search</span>-->
+<!--  </div>-->
+<!--</div>-->

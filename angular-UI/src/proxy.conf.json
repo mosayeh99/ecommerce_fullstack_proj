@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://ecommerce.com",
+    "secure": false
+  }
+}

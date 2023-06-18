@@ -1,0 +1,11 @@
+.banners-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+  gap: 2%;
+}
+
+@media (max-width: 776px) {
+  .banners-collection {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2), 1fr));
+  }
+}

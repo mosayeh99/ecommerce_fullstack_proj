@@ -1,0 +1,32 @@
+<div class="login-form mycontainer">
+  <form (ngSubmit)="onSubmit(loginForm.value)" [formGroup]="loginForm">
+    <h2>Login</h2>
+    <div class="form-error">
+      <mat-error *ngIf="serverMsgError">{{serverMsgError}}</mat-error>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="name@example.com">
+      <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="email.hasError('email')">Email is not valid</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+      <mat-error *ngIf="password.hasError('minlength')">Password must be more than 8</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-flat-button color="primary" [disabled]="loginForm.invalid">SIGN IN</button>
+  </form>
+  <a routerLink="/user/forget-password" class="d-block pt-1">Forget password?</a>
+
+  <p class="text-center pt-3">Not registered?
+    <a routerLink="/user/register">Create Account</a>
+  </p>
+</div>

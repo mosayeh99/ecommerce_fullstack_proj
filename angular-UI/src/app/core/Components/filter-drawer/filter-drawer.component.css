@@ -1,0 +1,85 @@
+.product-filter-drawer {
+  position: fixed;
+  top: 0;
+  left: calc(-100vw - 65px);
+  width: calc(100vw - 65px);
+  height: 100vh;
+  background-color: white;
+  z-index: 99;
+  transition: var(--main-transition);
+  visibility: hidden;
+}
+
+.product-filter-drawer.active {
+  left: 0;
+  visibility: visible;
+}
+
+.product-filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.product-filter-head .drawer-close-btn {
+  background-color: transparent;
+}
+
+.product-filter-menu span {
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.product-filter-menu .filter-menu-item {
+  padding: 10px 20px;
+}
+
+.product-filter-menu .filter-menu-item .filter-toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.product-filter-menu .filter-menu-item label {
+  display: flex;
+  align-items: center;
+}
+
+.product-filter-menu .filter-menu-item .filter-toggle-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--secondary-color);
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-filter-menu .filter-menu-item .filter-toggle-box span svg{
+  position: absolute;
+  left: 0;
+  color: white;
+}
+
+.product-filter-menu .filter-menu-item .filter-toggle-checkbox:checked + .filter-toggle-box {
+  background-color: var(--secondary-color);
+}
+
+@media (min-width: 500px) {
+  .product-filter-drawer {
+    width: 340px;
+    left: -340px;
+  }
+}
+
+@media (min-width: 991px) {
+  .product-filter-drawer {
+    width: 420px;
+    left: -420px;
+  }
+}

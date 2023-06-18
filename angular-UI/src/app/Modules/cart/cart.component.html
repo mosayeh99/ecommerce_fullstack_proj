@@ -1,0 +1,75 @@
+<app-page-head-banner [headText]="'cart'"></app-page-head-banner>
+
+<div class="mycontainer">
+  <div  class="cart-table d-grid">
+    <div  class="cart-table-head d-none d-md-flex row text-center py-3">
+      <span class="col-6 fw-semibold">Product</span>
+      <span class="col-2 fw-semibold">Price</span>
+      <span class="col-2 fw-semibold">Quantity</span>
+      <span class="col-2 fw-semibold">Subtotal</span>
+    </div>
+
+    <div  class="cart-table-body d-flex d-md-block flex-column gap-4">
+      <div  class="cart-product row align-items-center py-md-3 text-md-center">
+        <div  class="cart-product-item col-12 col-md-6 py-3">
+          <div class="row align-items-center">
+            <span class="cart-product-del-btn col-1">×</span>
+            <div class="col-3 col-lg-2 d-flex align-items-center justify-content-center">
+              <a routerLink="/products/1">
+                <img class="w-75"
+                     src="https://raw.githubusercontent.com/mosayeh99/products_json_api/main/images/2/1.jpg" alt="">
+              </a>
+            </div>
+            <a routerLink="/products/1" class="col">
+              <span class="text-center text-md-start">Welcome Hierophant T-Shirt – White - XXL</span>
+            </a>
+          </div>
+        </div>
+        <div  class="cart-product-price col-12 col-md py-3">
+          <div class="row justify-content-between">
+            <span class="col d-md-none fw-semibold">Price</span>
+            <span class="col text-end text-md-center">EGP555</span>
+          </div>
+        </div>
+        <div  class="cart-product-quantity col-12 col-md-2 py-3">
+          <div class="row align-items-center">
+            <span class="col d-md-none fw-semibold">Quantity</span>
+            <app-product-quantity></app-product-quantity>
+          </div>
+        </div>
+        <div  class="cart-product-subtotal col-12 col-md-2 py-3">
+          <div class="row">
+            <span class="col d-md-none fw-semibold">Subtotal</span>
+            <span class="col text-end text-md-center">EGP555</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-foot-btns">
+      <div  class="cart-foot-shopping-btn d-none d-md-block">
+        <a href="../index.html">Continue Shopping</a>
+      </div>
+      <div class="cart-foot-checkout-btn">
+        <a routerLink="/checkout">Proceed to checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div class="cart-empty mycontainer">-->
+<!--  <span>-->
+<!--    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-x" width="128" height="128" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">-->
+<!--      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
+<!--      <circle cx="6" cy="19" r="2"></circle>-->
+<!--      <circle cx="17" cy="19" r="2"></circle>-->
+<!--      <path d="M17 17h-11v-14h-2"></path>-->
+<!--      <path d="M6 5l7.999 .571m5.43 4.43l-.429 2.999h-13"></path>-->
+<!--      <path d="M17 3l4 4"></path>-->
+<!--      <path d="M21 3l-4 4"></path>-->
+<!--    </svg>-->
+<!--  </span>-->
+<!--  <div class="not-found-text">-->
+<!--    <span>cart is empty</span>-->
+<!--  </div>-->
+<!--</div>-->

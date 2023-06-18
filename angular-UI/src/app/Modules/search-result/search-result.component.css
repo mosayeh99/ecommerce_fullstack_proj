@@ -1,0 +1,84 @@
+/* --------Filter Section--------- */
+.product-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.product-filter-bar .product-filter-btn {
+  cursor: pointer;
+}
+
+.display-products-shape .large-screen-display span,
+.display-products-shape .mobile-display span {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+.display-products-shape .large-screen-display span.active,
+.display-products-shape .mobile-display span.active {
+  fill: var(--main-color);
+}
+
+.display-products-shape span svg {
+  pointer-events: none;
+}
+
+/*------------Product List------------*/
+.shopy-section-product-list {
+  padding: 30px 0;
+}
+
+.shopy-section-product-list #product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5), 1fr));
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .shopy-section-product-list #product-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .shopy-section-product-list #product-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+  }
+  .shopy-section-product-list #product-list.grid-1-applied {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (min-width: 767px) {
+  .shopy-section-product-list #product-list.grid-2-applied {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+  }
+  .shopy-section-product-list #product-list.grid-4-applied {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+  }
+}
+
+@media (min-width: 991px) {
+  .shopy-section-product-list #product-list.grid-4-applied {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5), 1fr));
+  }
+}
+
+/*------------No Products Founded------------*/
+.result-not-found {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 80px;
+  display: none;
+}
+
+.result-not-found .not-found-text {
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}

@@ -1,0 +1,142 @@
+/* ----------------Footer---------------- */
+footer .shopy-footer-section {
+  background-color: var(--main-color);
+  padding: 80px 0;
+  color: var(--text-color-in-dark);
+}
+
+footer .shopy-footer-section .footer-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+footer .shopy-footer-section .footer-section > * {
+  flex: 1;
+}
+
+footer .shopy-footer-section .about-section .about-content > * {
+  margin-bottom: 30px;
+}
+
+footer .shopy-footer-section .contact-section .contact-content div {
+  position: relative;
+}
+
+footer .shopy-footer-section .text-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+footer .shopy-footer-section .text-head div {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .shopy-footer-section .text-head .footer-plus-icon span {
+  position: absolute;
+  width: 14px;
+  height: 1px;
+  background-color: white;
+  transition: var(--main-transition);
+  display: none;
+  pointer-events: none;
+}
+
+footer .shopy-footer-section .text-head .footer-plus-icon span:last-child {
+  transform: rotate(90deg);
+}
+
+footer .shopy-footer-section .text-head .footer-plus-icon span:last-child.opened {
+  transform: rotate(0deg);
+}
+
+footer .shopy-footer-section .contact-section .contact-content > * {
+  margin-bottom: 30px;
+}
+
+footer .shopy-footer-section .contact-section .contact-content label {
+  position: relative;
+  transition: var(--main-transition);
+  left: 10px;
+  top: 20px;
+}
+
+footer .shopy-footer-section .contact-section .contact-content input:not([type='submit']),
+footer .shopy-footer-section .contact-section .contact-content textarea {
+  background-color: transparent;
+  border-bottom: 2px solid #777;
+  outline: 0;
+  resize: none;
+  caret-color: var(--caret-color);
+  width: 100%;
+  cursor: inherit;
+  position: relative;
+  padding-left: 10px;
+  color: white;
+}
+
+footer .shopy-footer-section .contact-section .contact-content input[type='submit'] {
+  background-color: var(--secondary-color);
+  color: white;
+  width: 100px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: var(--btn--border-radius);
+}
+
+footer .shopy-footer-section .contact-section .contact-content p {
+  padding-left: 10px;
+  color: #d42c35;
+  display: none;
+}
+
+footer .bottom-bar {
+  background-color: black;
+  color: var(--text-color-in-dark);
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  footer .shopy-footer-section {
+    padding: 50px 0;
+  }
+  footer .shopy-footer-section .footer-section {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    margin-bottom: 62px;
+  }
+  footer .shopy-footer-section {
+    padding: 50px 0 20px;
+  }
+  footer .shopy-footer-section .footer-section {
+    flex-direction: column;
+    gap:0;
+  }
+  footer .shopy-footer-section .text-head div span {
+    display: block !important;
+  }
+  footer .shopy-footer-section .footer-col {
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+  }
+  footer .shopy-footer-section .footer-col.active {
+    max-height: 440px;
+  }
+}

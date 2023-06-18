@@ -1,0 +1,15 @@
+.content-link {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-img {
+  width: 100%;
+}
+
+.content-text {
+  color: var(--main-color);
+}

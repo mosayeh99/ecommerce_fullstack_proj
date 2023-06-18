@@ -1,0 +1,93 @@
+.product {
+  box-shadow: 0 1px 10px rgba(0 0 0 / 0.1);
+}
+
+.product-images-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-images-container a img:last-child {
+  transition: var(--secondary-transition);
+}
+
+.product-images-container:hover a img:last-child {
+  opacity: 1 !important;
+}
+
+.product-images-container .product-btns {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: 10px;
+  right: -24px;
+  color: var(--secondary-color);
+}
+
+.product-images-container .product-btns > * {
+  position: relative;
+  right: 0;
+}
+
+.product-images-container:hover .product-btns > * svg:hover {
+  animation: scaleWishlistIcon 0.5s alternate infinite ease-in-out;
+  cursor: pointer;
+}
+
+.product-images-container .product-btns .product-add-to-wishlist {
+  transition: 0.2s ease-in-out;
+}
+
+.product-images-container .product-btns .product-add-to-cart-btn {
+  transition: 0.2s 0.1s ease-in-out;
+}
+
+.product-images-container .product-btns .product-quick-view-btn {
+  transition: 0.2s 0.2s ease-in-out;
+}
+
+.product-add-to-wishlist svg.is--added-to-wishlist {
+  fill: var(--secondary-color);
+}
+
+@keyframes scaleWishlistIcon {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.product-images-container .product-btns .product-del-from-wishlist {
+  transition: 0.2s ease-in-out;
+}
+
+.product-del-from-wishlist svg {
+  cursor: pointer;
+  transition: var(--main-transition);
+  color: var(--text-color-in-light);
+}
+
+.product-info-container {
+  background-color: white;
+  padding: 10px;
+}
+
+.product-price {
+  color: var(--text-color-in-light);
+}
+
+.product-title {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  .product-images-container:hover .product-btns > * {
+    right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-images-container .product-btns > * {
+    right: 30px;
+  }
+}

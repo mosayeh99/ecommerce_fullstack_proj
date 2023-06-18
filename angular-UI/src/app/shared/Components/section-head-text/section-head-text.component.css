@@ -1,0 +1,24 @@
+.section-head-text {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 30px;
+  color: var(--main-color);
+}
+
+/*.slider-head-text::after,*/
+/*.slider-head-text::before {*/
+/*  position: absolute;*/
+/*  content: "";*/
+/*  width: 80px;*/
+/*  height: 1px;*/
+/*  top: 50%;*/
+/*  background-color: var(--secondary-color);*/
+/*}*/
+
+/*.slider-head-text::after {*/
+/*  left: 150px;*/
+/*}*/
+
+/*.slider-head-text::before {*/
+/*  right: 150px;*/
+/*}*/

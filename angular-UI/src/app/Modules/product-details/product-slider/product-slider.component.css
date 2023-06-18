@@ -1,0 +1,33 @@
+.mainSliderImage img {
+  width: 100%;
+}
+
+.smallBtnImages {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5), 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.smallBtnImages .slide-thumbs {
+  background-color: #eee;
+}
+
+.smallBtnImages .slide-thumbs img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: var(--main-transition);
+}
+
+.smallBtnImages img.active,
+.smallBtnImages img:hover {
+  opacity: 1 !important;
+}
+
+@media (max-width: 991px) {
+  .mainSliderImage img {
+    width: 100%;
+  }
+}

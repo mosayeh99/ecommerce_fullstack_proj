@@ -1,0 +1,37 @@
+.quick-view-drawer {
+  position: fixed;
+  width: calc(100vw - 65px);
+  height: 100vh;
+  top: 0;
+  right: calc(-100vw - 65px);
+  background-color: white;
+  visibility: hidden;
+  z-index: 99;
+  transition: var(--main-transition);
+}
+
+.quick-view-drawer.active {
+  right: 0;
+  visibility: visible;
+}
+
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.drawer-header span {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.drawer-header .drawer-close-btn {
+  background-color: transparent;
+  position: relative;
+  left: 12px;
+}

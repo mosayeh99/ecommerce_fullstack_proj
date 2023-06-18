@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* --------Global Rules--------- */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #222222;
+  --secondary-color: #1e90ff;
+  --danger-color: #dc3545;
+  --background-color: #eee;
+  --link-hover-color: #777;
+  --text-color-in-dark: #777;
+  --text-color-in-light: #777;
+  --caret-color: #777;
+  --section-padding: 50px 0;
+  --btn--border-radius: 2px;
+  --main-transition: 0.3s linear;
+  --secondary-transition: 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul {
+  margin-bottom: 0;
+}
+
+.mycontainer {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .mycontainer {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mycontainer {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mycontainer {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .mycontainer {
+    width: 1380px;
+  }
+}
+
+/* ---Angular Material Styles--- */
+mat-tooltip-component {
+  font-size: 12px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

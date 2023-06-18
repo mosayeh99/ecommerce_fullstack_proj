@@ -1,0 +1,38 @@
+/*------------Product List------------*/
+.product-list-container {
+  padding: 30px 0;
+}
+
+.product-list-container .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 5), 1fr));
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .product-list-container .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .product-list-container .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+  }
+}
+
+.wishlist-empty {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 80px;
+  display: none;
+}
+
+.wishlist-empty .not-found-text {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 300;
+}

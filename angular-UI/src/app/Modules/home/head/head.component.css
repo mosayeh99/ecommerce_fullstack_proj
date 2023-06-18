@@ -1,0 +1,35 @@
+/* ------------Head banner----------- */
+#banner-head-two-images img {
+  height: calc(100vh - 161px);
+  object-fit: cover;
+}
+
+#banner-head-two-images #banner-text {
+  transform: translate(-50%,-50%);
+  font-size: 44px;
+  width: 100%;
+  max-width: 730px;
+}
+
+#banner-head-two-images #banner-arrow {
+  top: 75%;
+  transform: translateX(-50%);
+  animation: headBannerArrow 0.8s alternate infinite ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes headBannerArrow {
+  to {
+    top: 78%;
+  }
+}
+
+@media (max-width: 767px) {
+  #banner-head-two-images img {
+    height: calc(100vh - 189px);
+  }
+  #banner-head-two-images #banner-text {
+    font-size: 34px;
+    width: unset;
+  }
+}
