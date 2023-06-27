@@ -1,7 +1,9 @@
+import Home from "../components/Home.vue";
+
 export default [
     {
-        path: '',
-        name: '',
-        component: '',
+        path: '/dashboard',
+        name: 'home',
+        component: Home,
     },
 ]

@@ -34,7 +34,14 @@ export default defineConfig({
 });
 ```
 
-- Add lines to resources/js/bootstrap.js
+
+
+### Create helpers
+
+- resources
+    - js
+        - helpers
+            - index.js
 ```
 import jquery from 'jquery';
 window.$ = window.query = jquery;
@@ -42,48 +49,57 @@ window.$ = window.query = jquery;
 
 
 
-### Create component
+- Add line to resources/js/bootstrap.js
+```
+import './helpers/index';
+```
+
+
+
+### Create routes
 
 - resources
     - js
-        - components
-            - Dashboard.vue
+      - router 
+          - index.js
+          - routes.js
 
+####
 
-### Create routes.js
-
-- resources
-    - js
-        - routes.js
-
+- file: index.js
 ```
-import Dashboard from "./components/Dashboard.vue";
-
-export default [
-    {
-        path: '/admin/dashboard',
-        name: 'admin.dashboard',
-        component: Dashboard,
-    },
-]
-```
-
-
-### file app.js
-
-```
-import './bootstrap';
-
-import {createApp} from 'vue/dist/vue.esm-bundler.js';
 import {createRouter, createWebHistory} from "vue-router";
 import Routes from "./routes.js";
-
-const app = createApp({});
 
 const router = createRouter({
     routes: Routes,
     history: createWebHistory(),
 });
+
+export default router
+```
+
+- file: routes.js
+```
+export default [
+    {
+        path: '',
+        name: '',
+        component: '',
+    },
+]
+```
+
+
+
+### file app.js
+```
+import './bootstrap';
+
+import {createApp} from 'vue/dist/vue.esm-bundler.js';
+import router from "./router/index.js";
+
+const app = createApp({});
 
 app.use(router);
 
@@ -91,30 +107,41 @@ app.mount('#app');
 ```
 
 
-### Create Application Controller
 
-> php artisan make:controller ApplicationController
-
+### Create app view
+- resources
+    - views
+        - app.blade.php
 ```
-<?php
-
-namespace App\Http\Controllers;
-
-class ApplicationController extends Controller
-{
-    public function __invoke()
-    {
-        return view('layouts.admin.layout');
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopy</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+</body>
+</html>
 ```
 
-- Add route for this method
-> Route::get('{view}', ApplicationController::class)->where('view', '(.*)');
+
+### Create app router
+
+> Route::view('{page}', 'app')->where('page', '(.*)');
+
 
 
 #
 #
+#
+
+
+
 ## Vue Validation
 
 > npm install vee-validate --save
@@ -183,15 +210,18 @@ const updateSchema = yup.object({
 });
 ```
 
+
+
 #
 #
 #
 
 
-### Use toast notification
+
+## Use toast notification
 > npm install --save toastr
 
-- create file toastr.js in resources/js/toastr.js
+- create file toastr.js in resources/js/helpers
 ```
 import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
@@ -205,7 +235,7 @@ export function useToastr() {
 }
 ```
 
-- Then add lines to resources/js/bootstrap.js
+- Then add lines to resources/js/helpers/index.js
 ```
 import {useToastr} from "@/toastr.js";
 window.toastr = useToastr();

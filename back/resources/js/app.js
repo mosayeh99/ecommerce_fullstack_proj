@@ -1,10 +1,7 @@
 import './bootstrap';
 
-import 'admin-lte/plugins/bootstrap/js/bootstrap.min.js';
-import 'admin-lte/dist/js/adminlte.min.js';
-
 import {createApp} from 'vue/dist/vue.esm-bundler.js';
-import router from "./router/routes.js";
+import router from "./router/index.js";
 
 const app = createApp({});
 
